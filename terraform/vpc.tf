@@ -63,7 +63,7 @@ resource "aws_internet_gateway" "main-gw" {
 
 #Create resource router tables
 resource "aws_route_table" "main-public-rt" {
-    vpc_id = "${vpc_id.main.id}"
+    vpc_id = "${aws_vpc.main.id}"
     route {
         cidr_block = "0.0.0.0/0"
         gateway_id = "${aws_internet_gateway.main-gw.id}"
@@ -73,7 +73,7 @@ resource "aws_route_table" "main-public-rt" {
     }
 }
 
-  #Route associations for public subnets
+#Route associations for public subnets
 resource "aws_route_table_association" "main-public-1a" {
     subnet_id = "${aws_subnet.main-public-1.id}"
     route_table_id = "${aws_route_table.main-public-rt.id}"
