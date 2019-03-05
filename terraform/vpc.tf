@@ -79,6 +79,10 @@ resource "aws_route_table" "main-public-rt" {
 
 resource "aws_route_table_association" "main-public-1a" {
     subnet_id = "${aws_subnet.main-public-1.id}"
+    route_table_id = "${aws_route_table.main-public-rt.id}"
+}
+
+resource "aws_route_table_association" "main-public-2c" {
     subnet_id = "${aws_subnet.main-public-2.id}"
     route_table_id = "${aws_route_table.main-public-rt.id}"
 }
