@@ -12,6 +12,7 @@ resource "aws_vpc" "main" {
 }
 
 #Create subnets
+
 resource "aws_subnet" "main-public-1" {
     vpc_id = "${aws_vpc.main.id}"
     cidr_block = "10.0.1.0/24"
@@ -62,6 +63,7 @@ resource "aws_internet_gateway" "main-gw" {
 }
 
 #Create resource router tables
+
 resource "aws_route_table" "main-public-rt" {
     vpc_id = "${aws_vpc.main.id}"
     route {
@@ -74,6 +76,7 @@ resource "aws_route_table" "main-public-rt" {
 }
 
 #Route associations for public subnets
+
 resource "aws_route_table_association" "main-public-1a" {
     subnet_id = "${aws_subnet.main-public-1.id}"
     route_table_id = "${aws_route_table.main-public-rt.id}"
