@@ -10,9 +10,10 @@ resource "aws_elb" "loadb" {
         target = "HTTP:80/"
         interval = 30
     }
+
     listener {
-        instace_port = 80
-        instace_protocol = "http"
+        instance_port = 80
+        instance_protocol = "http"
         lb_port = 80
         lb_protocol = "http"
     }
