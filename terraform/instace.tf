@@ -4,7 +4,7 @@ resource "aws_instance" "vm-cloud" {
     instance_type = "t2.micro"
     key_name = "access-cloudjob"
     subnet_id = "${aws_subnet.main-public-1.id}"
-    vpc_security_group_ids = ["${aws_security_group.access-remote.id}"]
+    vpc_security_group_ids = ["${aws_security_group.access-remote.id}","${aws_security_group.access-web.id}"]
     associate_public_ip_address = "true"
     tags {
         Name = "Infra as Code"
@@ -18,7 +18,7 @@ resource "aws_instance" "vm-cloud2" {
     instance_type = "t2.micro"
     key_name = "access-cloudjob"
     subnet_id = "${aws_subnet.main-public-2.id}"
-    vpc_security_group_ids = ["${aws_security_group.access-remote.id}"]
+    vpc_security_group_ids = ["${aws_security_group.access-remote.id}","${aws_security_group.access-web.id}"]
     associate_public_ip_address = "true"
     tags {
         Name = "Infra as Code"
