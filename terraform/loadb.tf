@@ -19,5 +19,5 @@ resource "aws_elb" "loadb" {
     }
     cross_zone_load_balancing = true
     instances = ["${aws_instance.vm-cloud.id}","${aws_instance.vm-cloud2.id}"]
-    security_groups = ["${aws_security_group.access-remote.id}"]
+    security_groups = ["${aws_security_group.access-web.id}"]
 }
