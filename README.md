@@ -1,6 +1,6 @@
 # Infra as Code
 # Deploy de infraestrutura na AWS usando terraform
-Recursos Craidos
+Recursos Criados
   - VPC
   - Subnets
   - Security Groups
