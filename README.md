@@ -1,3 +1,9 @@
 # Infra as Code
 # Deploy de infraestrutura na AWS usando terraform
-Criação de infraestrutura no provedor de nuvem AWS.
+Recursos Craidos
+  - VPC
+  - Subnets
+  - Security Groups
+  - Instancias EC2
+  - Internet Gateway
+  - Load Balace
