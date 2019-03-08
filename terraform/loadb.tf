@@ -22,3 +22,5 @@ resource "aws_elb" "loadb" {
     instances = ["${aws_instance.vm-cloud.id}","${aws_instance.vm-cloud2.id}"]
     security_groups = ["${aws_security_group.access-web.id}"]
 }
+
+# Verificar por o lb não esta funcionando via terraform!
