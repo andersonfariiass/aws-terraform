@@ -1,0 +1,2 @@
+#Lista de hosts a serem gerenciadas pelo ansible
+[servers]
