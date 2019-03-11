@@ -2,11 +2,11 @@
 
 resource "aws_elb" "loadb" {
     name_prefix = "loadb"
-    availability_zones = ["us-east-1a", "us-east-1c"]
+    #availability_zones = ["us-east-1a", "us-east-1c"]
     subnets = ["${aws_subnet.main-public-1.id}", "${aws_subnet.main-public-2.id}"]
     health_check {
-        healthy_threshold = 2
-        unhealthy_threshold = 2
+        healthy_threshold = 4
+        unhealthy_threshold = 4
         timeout = 3
         target = "HTTP:80/"
         interval = 30
