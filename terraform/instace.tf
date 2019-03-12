@@ -34,7 +34,7 @@ output "aws_ip_vm1" {
 }
 
 output "aws_dns_vm1" {
-    value = "${aws_instance.vm-cloud2.public_dns}"
+    value = "${aws_instance.vm-cloud.public_dns}"
 }
 
 output "aws_ip_vm2" {
