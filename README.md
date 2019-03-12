@@ -7,3 +7,4 @@ Recursos Criados
   - Instancias EC2
   - Internet Gateway
   - Load Balace
+  ![Cenario]()
