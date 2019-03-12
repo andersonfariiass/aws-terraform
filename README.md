@@ -7,4 +7,4 @@ Recursos Criados
   - Instancias EC2
   - Internet Gateway
   - Load Balace
-  ![Cenario]()
+  - ![Cenario](https://github.com/andersonfariiass/aws-terraform/issues/1#issue-419749041)
